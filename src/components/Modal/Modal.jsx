@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import css from '../styles.module.css';
 import PropTypes from 'prop-types';
 
@@ -9,7 +9,7 @@ export default function Modal({ onClose, children }) {
     return () => {
       window.removeEventListener('keydown', onEscClick);
     };
-  }, []);
+  }, [onEscClick]);
 
   const onEscClick = e => {
     if (e.code === 'Escape') {
