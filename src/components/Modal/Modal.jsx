@@ -15,7 +15,7 @@ export default function Modal({ onClose, children }) {
     return () => {
       window.removeEventListener('keydown', onEscClick);
     };
-  }, [() => onEscClick()]);
+  }, [onEscClick]);
 
   const onBackdropClick = e => {
     if (e.currentTarget === e.target) {
